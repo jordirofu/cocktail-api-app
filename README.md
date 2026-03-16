@@ -1,78 +1,63 @@
-Cocktail Recipe Finder
+# Cocktail Recipe Finder
 
 A modern web application to discover drink recipes based on ingredients and categories.
 Users can explore cocktails, shots, and coffee-based drinks, save their favorites, and even generate new drink recipes using AI.
 
-Live Demo
+## Live Demo
 
 https://your-demo-url.com
 
-Features
+## Features
 
-Search drink recipes by ingredient
+* Search drink recipes by **ingredient**
+* Filter recipes by **category** (cocktail, shot, coffee, etc.)
+* View detailed drink recipes
+* **Favorites management** (add/remove drinks)
+* **AI-powered drink recipe generator**
+* Persistent favorites stored with **localStorage**
+* Responsive UI and modal-based recipe visualization
 
-Filter recipes by category (cocktail, shot, coffee, etc.)
+## Tech Stack
 
-View detailed drink recipes
+* **React** – UI library
+* **TypeScript** – static typing
+* **Axios** – HTTP client for API requests
+* **Zustand** – global state management
+* **Slice Pattern** – modular store architecture
+* **React Router** – client-side routing
+* **Zod** – runtime validation of API responses
+* **LocalStorage** – persistence of user favorites
+* **AI APIs** – generation of new drink recipes
 
-Favorites management (add/remove drinks)
+## Architecture Highlights
 
-AI-powered drink recipe generator
+### State Management
 
-Persistent favorites stored with localStorage
+Global state is managed with **Zustand** using a **slice-based architecture**:
 
-Responsive UI and modal-based recipe visualization
+* `recipesSlice` – recipe search and API data
+* `favoritesSlice` – user favorites
+* `IASlice` – AI recipe generation
+* `notificationSlice` – UI notifications
 
-Tech Stack
+This modular approach improves **scalability and separation of concerns**.
 
-React – UI library
+### API Validation
 
-TypeScript – static typing
+External API responses are validated using **Zod schemas** to ensure type-safe data handling and prevent runtime errors.
 
-Axios – HTTP client for API requests
+### Services Layer
 
-Zustand – global state management
+API calls are encapsulated in a **services layer**:
 
-Slice Pattern – modular store architecture
-
-React Router – client-side routing
-
-Zod – runtime validation of API responses
-
-LocalStorage – persistence of user favorites
-
-AI APIs – generation of new drink recipes
-
-Architecture Highlights
-State Management
-
-Global state is managed with Zustand using a slice-based architecture:
-
-recipesSlice – recipe search and API data
-
-favoritesSlice – user favorites
-
-IASlice – AI recipe generation
-
-notificationSlice – UI notifications
-
-This modular approach improves scalability and separation of concerns.
-
-API Validation
-
-External API responses are validated using Zod schemas to ensure type-safe data handling and prevent runtime errors.
-
-Services Layer
-
-API calls are encapsulated in a services layer:
-
-RecipeService – recipe search
-
-IAService – AI recipe generation
+* `RecipeService` – recipe search
+* `IAService` – AI recipe generation
 
 This keeps networking logic separate from UI components.
 
-Project Structure
+## Project Structure
+
+```text
 src
  ├── components        # Reusable UI components
  ├── layouts           # Application layouts
@@ -83,30 +68,35 @@ src
  ├── views             # Application pages
  ├── router.tsx        # Application routing
  └── main.tsx          # Application entry point
-Installation
+```
+
+## Installation
 
 Clone the repository:
 
-git clone https://github.com/jordirofu/cocktail-api-app.git
+```bash
+git clone https://github.com/your-username/cocktail-recipe-finder.git
+```
 
 Install dependencies:
 
+```bash
 npm install
+```
 
 Run the development server:
 
+```bash
 npm run dev
-Future Improvements
+```
 
-User authentication
+## Future Improvements
 
-Cloud-synced favorites
+* User authentication
+* Cloud-synced favorites
+* Advanced filtering (alcoholic / non-alcoholic / glass type)
+* Improved AI recipe customization
 
-Advanced filtering (alcoholic / non-alcoholic / glass type)
+## Author
 
-Improved AI recipe customization
-
-Author
-
-Developed by Jordi Romero.
-
+Developed by **Jordi Romero**.
