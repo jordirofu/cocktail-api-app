@@ -5,7 +5,7 @@ Users can explore cocktails, shots, and coffee-based drinks, save their favorite
 
 ## Live Demo
 
-[https://rombococktail.netlify.app/]
+https://rombococktail.netlify.app/
 
 ## Features
 
