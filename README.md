@@ -90,13 +90,6 @@ Run the development server:
 npm run dev
 ```
 
-## Future Improvements
-
-* User authentication
-* Cloud-synced favorites
-* Advanced filtering (alcoholic / non-alcoholic / glass type)
-* Improved AI recipe customization
-
 ## Author
 
 Developed by **Jordi Romero**.
