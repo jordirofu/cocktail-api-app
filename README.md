@@ -5,7 +5,7 @@ Users can explore cocktails, shots, and coffee-based drinks, save their favorite
 
 ## Live Demo
 
-https://your-demo-url.com
+[https://rombococktail.netlify.app/]
 
 ## Features
 
@@ -75,7 +75,7 @@ src
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/cocktail-recipe-finder.git
+git clone https://github.com/jordirofu/cocktail-recipe-finder.git
 ```
 
 Install dependencies:
