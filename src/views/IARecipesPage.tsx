@@ -1,4 +1,6 @@
 import type { SubmitEvent } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { useAppStore } from "../stores/useAppStore";
 
 export default function IARecipesPage() {
@@ -59,9 +61,24 @@ export default function IARecipesPage() {
           </div>
         </form>
 
-        <div className="py-10 whitespace-pre-wrap">
+        <div className="py-10 prose max-w-none">
           {queryOn && (<p className="text-center animate-blink">Generating...</p>)}
-          {recipe}
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              table: ({ ...props }) => (
+                <div className="overflow-x-auto my-4">
+                  <table className="min-w-full border-collapse border border-slate-300" {...props} />
+                </div>
+              ),
+              thead: ({ ...props }) => <thead className="bg-slate-100" {...props} />,
+              th: ({ ...props }) => <th className="border border-slate-300 px-4 py-2 text-left font-semibold" {...props} />,
+              td: ({ ...props }) => <td className="border border-slate-300 px-4 py-2" {...props} />,
+              tr: ({ ...props }) => <tr className="even:bg-slate-50" {...props} />,
+            }}
+          >
+            {recipe}
+          </ReactMarkdown>
         </div>
       </div>
     </>
