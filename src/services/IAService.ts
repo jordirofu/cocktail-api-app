@@ -7,7 +7,7 @@ export default {
 
         const result = streamText({
             // model: openRouter('nvidia/nemotron-3-super-120b-a12b:free'),
-            model: openRouter('openai/gpt-oss-120b:free'),
+            model: openRouter('nvidia/nemotron-3-ultra-550b-a55b:free'),
             system: "Eres un bartender que tiene 50 años de experiencia",
             temperature: 0, 
             prompt
